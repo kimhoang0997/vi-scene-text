@@ -1,0 +1,26 @@
+{
+    "fonts_folder": "/Users/hoangnguyen/GitHub/vi-scene-text/fonts",
+    "dictionaries": 
+    [
+        {
+            "name": "Vietnamese",
+            "ratio": 0.3,
+            "path": "/Users/hoangnguyen/GitHub/vi-scene-text/dicts/vi.txt"
+        },
+        {
+            "name": "English",
+            "ratio": 0.1,
+            "path": "/Users/hoangnguyen/GitHub/vi-scene-text/dicts/en.txt"
+        }
+    ],
+    "font_size_constraints": 
+    {
+        "min": 30,
+        "max": 120
+    },
+    "label_file_name": "labels.txt",
+    "padding_ratio": {
+        "min": 0,
+        "max": 0.3
+    }
+}
