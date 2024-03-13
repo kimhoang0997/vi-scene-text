@@ -1,0 +1,11 @@
+{
+    "training_folder": "output",
+    "label_path": "output/labels.txt",
+    "image_type": "png",
+    "rates":
+     {
+        "train_list.txt": 60,
+        "test_list.txt": 10,
+        "val_list.txt": 30
+    }
+}
