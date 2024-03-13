@@ -1,0 +1,86 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Data Augmentation Tool without Parameters",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
+            "name": "Data Augmentation Tool with Output Folder Parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": ["-o", "dataset/data-augmentation"]
+        },
+        {
+            "name": "Data Augmentation Tool with Number of Files Parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": ["-n", "5000", "-r"]
+        },
+        {
+            "name": "Data Augmentation Tool with Config Parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": ["-c", "configs/data-augmentation-tool-config.json"]
+        },
+        {
+            "name": "Data Augmentation Tool with Image Type Parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": ["-t", ".png"]
+        },
+        {
+            "name": "Data Augmentation Tool without Augmentation Parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-c", "configs/data-augmentation-tool.json",
+                "-n", "50000",
+                "-t", ".png",
+                "-o", "output"
+            ]
+        }
+        {
+            "name": "Data Augmentation Tool with All Parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "data-augmentation-tool.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-c", "configs/data-augmentation-tool.json",
+                "-n", "10000",
+                "-t", ".png",
+                "-o", "output",
+                "-r",
+                "-a"
+            ]
+        }
+        {
+            "name": "Create Trainning dataset",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "create-trainning-dataset.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-c", "configs/create-trainning-dataset.json"
+            ]
+        }
+    ]
+}
