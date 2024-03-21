@@ -1,16 +1,16 @@
 {
-    "fonts_folder": "/Users/hoangnguyen/GitHub/vi-scene-text/fonts",
+    "fonts_folder": "dataset/fonts",
     "dictionaries": 
     [
         {
             "name": "Vietnamese",
             "ratio": 0.3,
-            "path": "/Users/hoangnguyen/GitHub/vi-scene-text/dicts/vi.txt"
+            "path": "dataset/dicts/vi.txt"
         },
         {
             "name": "English",
             "ratio": 0.1,
-            "path": "/Users/hoangnguyen/GitHub/vi-scene-text/dicts/en.txt"
+            "path": "dataset/dicts/en.txt"
         }
     ],
     "font_size_constraints": 
