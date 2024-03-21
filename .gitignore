@@ -7,7 +7,6 @@ __pycache__/
 # C extensions
 *.so
 Dataset/
-inference/
 inference_results/
 output/
 train_data/
