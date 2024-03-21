@@ -11,7 +11,7 @@ from test_random_aug import Random_StrAug
 def preprocess():
     parser = argparse.ArgumentParser(description='Create trainning word-image dataset by dictionaries')
     parser.add_argument('-o', '--output', metavar="output-folder", default="output", help='folder that stores output files [default=output]')
-    parser.add_argument('-c', '--config', metavar="config-file", default="data-augmentation-tool.json", help='data augmentation config file')
+    parser.add_argument('-c', '--config', metavar="config-file", default="configs/createdataset/data-augmentation-tool.json", help='data augmentation config file')
     parser.add_argument('-t', '--image-type', default=".jpg", choices=[".jpg", ".png", ".bmp"], help='image type of image dataset [default=.jpg]')
     parser.add_argument('-n', '--number-words', type=int, default=50000, help='number of words in trainning dataset [default=50000]')
     parser.add_argument('-r', '--remove-existed-output', action='store_true', help='remove existed files in output folders')

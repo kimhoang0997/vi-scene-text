@@ -4,7 +4,7 @@ import argparse, json
 
 def preprocess():
     parser = argparse.ArgumentParser(description='Create trainning word-image dataset by dictionaries')
-    parser.add_argument('-c', '--config', metavar="config-file", default="create-trainning-dataset.json", help='split trainning dataset config file')
+    parser.add_argument('-c', '--config', metavar="config-file", default="configs/createdataset/create-trainning-dataset.json", help='split trainning dataset config file')
     args = parser.parse_args()
     return args
 
