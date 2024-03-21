@@ -8,7 +8,7 @@
             "name": "Data Augmentation Tool without Parameters",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": []
         },
@@ -16,7 +16,7 @@
             "name": "Data Augmentation Tool with Output Folder Parameter",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": ["-o", "dataset/data-augmentation"]
         },
@@ -24,7 +24,7 @@
             "name": "Data Augmentation Tool with Number of Files Parameter",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": ["-n", "5000", "-r"]
         },
@@ -32,7 +32,7 @@
             "name": "Data Augmentation Tool with Config Parameter",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": ["-c", "configs/data-augmentation-tool-config.json"]
         },
@@ -40,7 +40,7 @@
             "name": "Data Augmentation Tool with Image Type Parameter",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": ["-t", ".png"]
         },
@@ -48,7 +48,7 @@
             "name": "Data Augmentation Tool without Augmentation Parameter",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": [
                 "-c", "configs/data-augmentation-tool.json",
@@ -56,12 +56,12 @@
                 "-t", ".png",
                 "-o", "output"
             ]
-        }
+        },
         {
             "name": "Data Augmentation Tool with All Parameter",
             "type": "debugpy",
             "request": "launch",
-            "program": "data-augmentation-tool.py",
+            "program": "tools/createdataset/data-augmentation-tool.py",
             "console": "integratedTerminal",
             "args": [
                 "-c", "configs/data-augmentation-tool.json",
@@ -71,16 +71,50 @@
                 "-r",
                 "-a"
             ]
-        }
+        },
         {
             "name": "Create Trainning dataset",
             "type": "debugpy",
             "request": "launch",
-            "program": "create-trainning-dataset.py",
+            "program": "tools/createdataset/create-trainning-dataset.py",
             "console": "integratedTerminal",
             "args": [
-                "-c", "configs/create-trainning-dataset.json"
+                "-c", "configs/createdataset/create-trainning-dataset.json"
             ]
+        },
+        {
+            "name": "Show and labelling the raw data",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/createdataset/labeling.py",
+            "console": "integratedTerminal",
+            "args": [
+                "dataset/raw_dictguide/test_image",
+                "dataset/raw_dictguide/labels"
+            ]
+            // "args": ["--image_dir=dataset/dictguide/small/im1201.jpg", "--det_model_dir=inference/det/en_PP-OCRv3_det_infer",  "--rec_model_dir=inference/rec/vi_PP-OCRv3_rec", "--rec_char_dict_path=ppocr/utils/dict/vi_dict.txt"]           
+        },
+        {
+            "name": "Debugger for detection and regconization",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/debugger.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            // "args": ["dataset/raw_dictguide/test_image"]
+            "args": ["dataset/raw_dictguide/test_image"]           
+        },
+
+        {
+            "name": "Take word from dictguide label",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/createdataset/take-word-from-dictguide-label.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "-c", "configs/createdataset/take-word-from-dictguide-label.json"
+            ] 
         }
     ]
 }
