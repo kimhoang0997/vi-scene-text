@@ -31,7 +31,8 @@ def main():
                 for i in range(number):
                     # _, text, img_id = lines[counter + i].split("\t")
                     # img_path = f"{img_id}{config["image_type"]}"
-                    _, text, img_path = lines[counter + i].strip().split("\t")
+                    # _, text, img_path = lines[counter + i].strip().split("\t")
+                    img_path,text = lines[counter + i].strip().split("\t")
                     gt_file.write(f"{img_path}\t{text}\n")
                 counter += number
 
