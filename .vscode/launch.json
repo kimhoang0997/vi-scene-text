@@ -83,28 +83,38 @@
             ]
         },
         {
-            "name": "Show and labelling the raw data",
+            "name": "Show labelling the raw data",
             "type": "debugpy",
             "request": "launch",
-            "program": "tools/createdataset/labeling.py",
+            "program": "tools/createdataset/show-labeling.py",
             "console": "integratedTerminal",
             "args": [
-                "dataset/raw_dictguide/test_image",
-                "dataset/raw_dictguide/labels"
+                "dataset/raw_dictguide/dictguide_2023/test_image",
+                "dataset/raw_dictguide/dictguide_2023/labels"
             ]
-            // "args": ["--image_dir=dataset/dictguide/small/im1201.jpg", "--det_model_dir=inference/det/en_PP-OCRv3_det_infer",  "--rec_model_dir=inference/rec/vi_PP-OCRv3_rec", "--rec_char_dict_path=ppocr/utils/dict/vi_dict.txt"]           
+        },
+        {
+            "name": "Show rec label - image of word",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/createdataset/show-rec-label.py",
+            "console": "integratedTerminal",
+            "args": [
+                "dataset/dictguide_label/vintext_3_2024/rec_train_image_126anh",
+                "dataset/dictguide_label/vintext_3_2024/rec_train_image_126anh/rec_gt_train_126anh.txt"
+            ]
         },
         {
             "name": "Debugger for detection and regconization",
             "type": "debugpy",
             "request": "launch",
-            "program": "tools/debugger.py",
+            "program": "tools/test/debugger.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             // "args": ["dataset/raw_dictguide/test_image"]
-            "args": ["dataset/raw_dictguide/test_image"]           
+            "args": ["dataset/raw_dictguide/dictguide_2023/test_image"]           
         },
-
+        
         {
             "name": "Take word from dictguide label",
             "type": "debugpy",
@@ -114,6 +124,18 @@
             "justMyCode": true,
             "args": [
                 "-c", "configs/createdataset/take-word-from-dictguide-label.json"
+            ] 
+        },
+
+        {
+            "name": "Take word from rect label",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/createdataset/take-word-from-reclabel.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "-c", "configs/createdataset/take-word-from-reclabel.json"
             ] 
         }
     ]

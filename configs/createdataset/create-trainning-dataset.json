@@ -1,11 +1,11 @@
 {
-    "training_folder": "output",
-    "label_path": "output/labels.txt",
-    "image_type": "png",
+    "training_folder": "dataset/dictguide_label/vintext_3_2024/rec_train_sum_63_126_unrec",
+    "label_path": "dataset/dictguide_label/vintext_3_2024/rec_train_sum_63_126_unrec/label.txt",
+    "image_type": "JPG",
     "rates":
      {
-        "train_list.txt": 60,
-        "test_list.txt": 10,
+        "train_list.txt": 70,
+        "test_list.txt": 0,
         "val_list.txt": 30
     }
 }

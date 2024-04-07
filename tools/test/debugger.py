@@ -11,13 +11,6 @@ from tools.infer.predict_rec import TextRecognizer
 from tools.infer.utility import get_rotate_crop_image,draw_ocr_box_txt
 from PIL import Image, ImageDraw, ImageFont
 
-
-def create_label(filename, tag):
-    print(f"Created label for {filename}")
-
-def remove_label(filename):
-    print(f"Created label of {filename}")
-
 def b_boxes(box):
     x0 = box[0][0]
     y0 = box[0][1]

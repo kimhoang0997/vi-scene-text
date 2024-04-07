@@ -1,0 +1,6 @@
+{
+    "INPUT_FOLDER": "dataset/dictguide_label/vintext_3_2024/train_images",
+    "OUTPUT_FOLDER": "dataset/dictguide_label/vintext_3_2024/rec_train_image_126anh",
+    "LABEL_FILE": "dataset/dictguide_label/vintext_3_2024/train_label/label_126anh.csv",
+    "OUTPUT_LABEL_FILE": "dataset/dictguide_label/vintext_3_2024/rec_train_image_126anh/rec_gt_train_126anh.txt"
+}
